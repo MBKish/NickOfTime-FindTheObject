@@ -1,26 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="1vs-gl-9gR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2P8-8h-GG0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxq-Lh-TpM"/>
+                            <view opaque="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5I-5l-EUQ"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frV-L8-VO0"/>
+                            <view opaque="NO" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkC-l3-eXw"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vkC-l3-eXw" firstAttribute="top" secondItem="Pxq-Lh-TpM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4LM-Xz-LoS"/>
+                            <constraint firstItem="Pxq-Lh-TpM" firstAttribute="top" secondItem="frV-L8-VO0" secondAttribute="top" type="default" id="8OU-d5-Y32"/>
+                            <constraint firstAttribute="bottom" secondItem="Q5I-5l-EUQ" secondAttribute="bottom" constant="250" id="9gp-hz-9Jo"/>
+                            <constraint firstItem="frV-L8-VO0" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="106" id="AiQ-M3-Pai"/>
+                            <constraint firstItem="1vs-gl-9gR" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DGm-FP-mn2"/>
+                            <constraint firstAttribute="trailing" secondItem="1vs-gl-9gR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="F8M-g1-FsB"/>
+                            <constraint firstItem="Pxq-Lh-TpM" firstAttribute="leading" secondItem="frV-L8-VO0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Iz9-U4-qpZ"/>
+                            <constraint firstItem="Pxq-Lh-TpM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="164" id="J0a-Bh-O2z"/>
+                            <constraint firstItem="1vs-gl-9gR" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NbL-Gr-hRP"/>
+                            <constraint firstItem="Q5I-5l-EUQ" firstAttribute="leading" secondItem="frV-L8-VO0" secondAttribute="leading" type="default" id="Uvv-uS-ACg"/>
+                            <constraint firstAttribute="trailing" secondItem="Pxq-Lh-TpM" secondAttribute="trailing" constant="106" id="XUB-aU-tFq"/>
+                            <constraint firstItem="vkC-l3-eXw" firstAttribute="top" secondItem="Q5I-5l-EUQ" secondAttribute="top" type="default" id="bLn-1j-HBb"/>
+                            <constraint firstItem="vkC-l3-eXw" firstAttribute="bottom" secondItem="Q5I-5l-EUQ" secondAttribute="bottom" type="default" id="ems-cK-wqw"/>
+                            <constraint firstItem="vkC-l3-eXw" firstAttribute="trailing" secondItem="Pxq-Lh-TpM" secondAttribute="trailing" type="default" id="lnF-pP-B3m"/>
+                            <constraint firstItem="Q5I-5l-EUQ" firstAttribute="top" secondItem="frV-L8-VO0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="o6x-kl-2D8"/>
+                            <constraint firstItem="frV-L8-VO0" firstAttribute="top" secondItem="3" secondAttribute="top" constant="102" id="oDb-9R-op0"/>
+                            <constraint firstItem="vkC-l3-eXw" firstAttribute="leading" secondItem="Q5I-5l-EUQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ooy-cf-i1R"/>
+                            <constraint firstItem="Q5I-5l-EUQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="160" id="q0B-4T-Gfg"/>
+                            <constraint firstItem="vkC-l3-eXw" firstAttribute="leading" secondItem="Pxq-Lh-TpM" secondAttribute="leading" type="default" id="yKI-U5-DBO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commandLabel" destination="1vs-gl-9gR" id="5rA-rh-eMT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="commandLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0482A48D17BBE0E4002441BA /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0482A48C17BBE0E4002441BA /* ShapeView.m */; };
+		0482A49717BBE1FF002441BA /* blue_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A48E17BBE1FF002441BA /* blue_circle.png */; };
+		0482A49817BBE1FF002441BA /* blue_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A48F17BBE1FF002441BA /* blue_square.png */; };
+		0482A49917BBE1FF002441BA /* blue_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49017BBE1FF002441BA /* blue_triangle.png */; };
+		0482A49A17BBE1FF002441BA /* green_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49117BBE1FF002441BA /* green_circle.png */; };
+		0482A49B17BBE1FF002441BA /* green_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49217BBE1FF002441BA /* green_square.png */; };
+		0482A49C17BBE1FF002441BA /* green_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49317BBE1FF002441BA /* green_triangle.png */; };
+		0482A49D17BBE1FF002441BA /* pink_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49417BBE1FF002441BA /* pink_circle.png */; };
+		0482A49E17BBE1FF002441BA /* pink_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49517BBE1FF002441BA /* pink_square.png */; };
+		0482A49F17BBE1FF002441BA /* pink_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0482A49617BBE1FF002441BA /* pink_triangle.png */; };
+		04999CD317BB35F0009AFC05 /* TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04999CD217BB35F0009AFC05 /* TriangleView.m */; };
 		04E572C217BADD7100AD4441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E572C117BADD7100AD4441 /* UIKit.framework */; };
 		04E572C417BADD7100AD4441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E572C317BADD7100AD4441 /* Foundation.framework */; };
 		04E572C617BADD7100AD4441 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E572C517BADD7100AD4441 /* CoreGraphics.framework */; };
@@ -21,6 +32,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0482A48B17BBE0E4002441BA /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
+		0482A48C17BBE0E4002441BA /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
+		0482A48E17BBE1FF002441BA /* blue_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_circle.png; sourceTree = "<group>"; };
+		0482A48F17BBE1FF002441BA /* blue_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_square.png; sourceTree = "<group>"; };
+		0482A49017BBE1FF002441BA /* blue_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_triangle.png; sourceTree = "<group>"; };
+		0482A49117BBE1FF002441BA /* green_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_circle.png; sourceTree = "<group>"; };
+		0482A49217BBE1FF002441BA /* green_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_square.png; sourceTree = "<group>"; };
+		0482A49317BBE1FF002441BA /* green_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_triangle.png; sourceTree = "<group>"; };
+		0482A49417BBE1FF002441BA /* pink_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_circle.png; sourceTree = "<group>"; };
+		0482A49517BBE1FF002441BA /* pink_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_square.png; sourceTree = "<group>"; };
+		0482A49617BBE1FF002441BA /* pink_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_triangle.png; sourceTree = "<group>"; };
+		04999CD117BB35F0009AFC05 /* TriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleView.h; sourceTree = "<group>"; };
+		04999CD217BB35F0009AFC05 /* TriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleView.m; sourceTree = "<group>"; };
 		04E572BE17BADD7100AD4441 /* NickOfTime-FindTheObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NickOfTime-FindTheObject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E572C117BADD7100AD4441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04E572C317BADD7100AD4441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +112,10 @@
 				04E572D917BADD7100AD4441 /* MainStoryboard.storyboard */,
 				04E572DC17BADD7100AD4441 /* ViewController.h */,
 				04E572DD17BADD7100AD4441 /* ViewController.m */,
+				0482A48B17BBE0E4002441BA /* ShapeView.h */,
+				0482A48C17BBE0E4002441BA /* ShapeView.m */,
+				04999CD117BB35F0009AFC05 /* TriangleView.h */,
+				04999CD217BB35F0009AFC05 /* TriangleView.m */,
 				04E572C817BADD7100AD4441 /* Supporting Files */,
 			);
 			path = "NickOfTime-FindTheObject";
@@ -96,6 +124,15 @@
 		04E572C817BADD7100AD4441 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0482A48E17BBE1FF002441BA /* blue_circle.png */,
+				0482A48F17BBE1FF002441BA /* blue_square.png */,
+				0482A49017BBE1FF002441BA /* blue_triangle.png */,
+				0482A49117BBE1FF002441BA /* green_circle.png */,
+				0482A49217BBE1FF002441BA /* green_square.png */,
+				0482A49317BBE1FF002441BA /* green_triangle.png */,
+				0482A49417BBE1FF002441BA /* pink_circle.png */,
+				0482A49517BBE1FF002441BA /* pink_square.png */,
+				0482A49617BBE1FF002441BA /* pink_triangle.png */,
 				04E572C917BADD7100AD4441 /* NickOfTime-FindTheObject-Info.plist */,
 				04E572CA17BADD7100AD4441 /* InfoPlist.strings */,
 				04E572CD17BADD7100AD4441 /* main.m */,
@@ -163,6 +200,15 @@
 				04E572D617BADD7100AD4441 /* Default@2x.png in Resources */,
 				04E572D817BADD7100AD4441 /* Default-568h@2x.png in Resources */,
 				04E572DB17BADD7100AD4441 /* MainStoryboard.storyboard in Resources */,
+				0482A49717BBE1FF002441BA /* blue_circle.png in Resources */,
+				0482A49817BBE1FF002441BA /* blue_square.png in Resources */,
+				0482A49917BBE1FF002441BA /* blue_triangle.png in Resources */,
+				0482A49A17BBE1FF002441BA /* green_circle.png in Resources */,
+				0482A49B17BBE1FF002441BA /* green_square.png in Resources */,
+				0482A49C17BBE1FF002441BA /* green_triangle.png in Resources */,
+				0482A49D17BBE1FF002441BA /* pink_circle.png in Resources */,
+				0482A49E17BBE1FF002441BA /* pink_square.png in Resources */,
+				0482A49F17BBE1FF002441BA /* pink_triangle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +222,8 @@
 				04E572CE17BADD7100AD4441 /* main.m in Sources */,
 				04E572D217BADD7100AD4441 /* AppDelegate.m in Sources */,
 				04E572DE17BADD7100AD4441 /* ViewController.m in Sources */,
+				04999CD317BB35F0009AFC05 /* TriangleView.m in Sources */,
+				0482A48D17BBE0E4002441BA /* ShapeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +312,7 @@
 				GCC_PREFIX_HEADER = "NickOfTime-FindTheObject/NickOfTime-FindTheObject-Prefix.pch";
 				INFOPLIST_FILE = "NickOfTime-FindTheObject/NickOfTime-FindTheObject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,6 +324,7 @@
 				GCC_PREFIX_HEADER = "NickOfTime-FindTheObject/NickOfTime-FindTheObject-Prefix.pch";
 				INFOPLIST_FILE = "NickOfTime-FindTheObject/NickOfTime-FindTheObject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +348,7 @@
 				04E572E317BADD7100AD4441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
