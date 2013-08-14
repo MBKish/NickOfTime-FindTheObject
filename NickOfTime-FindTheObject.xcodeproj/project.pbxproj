@@ -32,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042AF79917BBF31B00FB2F45 /* PickedDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickedDelegate.h; sourceTree = "<group>"; };
 		0482A48B17BBE0E4002441BA /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
 		0482A48C17BBE0E4002441BA /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
 		0482A48E17BBE1FF002441BA /* blue_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_circle.png; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 				0482A48C17BBE0E4002441BA /* ShapeView.m */,
 				04999CD117BB35F0009AFC05 /* TriangleView.h */,
 				04999CD217BB35F0009AFC05 /* TriangleView.m */,
+				042AF79917BBF31B00FB2F45 /* PickedDelegate.h */,
 				04E572C817BADD7100AD4441 /* Supporting Files */,
 			);
 			path = "NickOfTime-FindTheObject";

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PickedDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <PickedDelegate>
+
+- (void) didChooseView: (ShapeView *) shapeView;
 
 @end

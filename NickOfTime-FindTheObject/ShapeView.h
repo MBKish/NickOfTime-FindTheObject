@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PickedDelegate.h"
 
 @interface ShapeView : UIImageView
+
+@property (strong, nonatomic) id <PickedDelegate> delegate;
 
 @end

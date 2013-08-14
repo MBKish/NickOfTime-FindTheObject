@@ -10,19 +10,19 @@
 
 @implementation ShapeView
 
+@synthesize delegate;
 
 - (id)initWithImage:(UIImage *)image{
     self = [super initWithImage:image];
     if (self) {
         
-        
-        
-        
-        
     }
     return self;
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [delegate didChooseView:self];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
