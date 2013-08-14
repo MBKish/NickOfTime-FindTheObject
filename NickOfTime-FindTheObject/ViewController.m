@@ -45,10 +45,13 @@
     NSString *tagString = [tagArray objectAtIndex:tagIndex];
     
     for (UIView *subview in self.view.subviews) {
-        if (subview.tag == [tagString intValue]) {
-            selectedView = subview;
-            break;
+        if (![subview isKindOfClass:[UILabel class]]) {
+            if (subview.tag == [tagString intValue]) {
+                selectedView = subview;
+                break;
+            }
         }
+    
     }
     
     int r = arc4random_uniform(4);

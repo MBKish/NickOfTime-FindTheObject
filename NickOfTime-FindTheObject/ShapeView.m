@@ -17,11 +17,6 @@
         
         
         
-        if (<#condition#>) {
-            <#statements#>
-        }
-        
-        
         
         
     }
