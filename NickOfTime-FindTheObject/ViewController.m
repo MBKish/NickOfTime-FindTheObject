@@ -15,6 +15,7 @@
     NSArray *commandArray;
     NSMutableArray *compareArray;
     __weak IBOutlet UILabel *commandLabel;
+    int badCount;
     //an array to randomize the shape of the objects
 }
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    badCount = 0;
     arrayOfTags = @[@"0",@"1",@"2",@"3"];
     commandArray = @[@"Red Square", @"Blue Square", @"Green Square", @"Red Circle", @"Blue Circle", @"Green Circle", @"Red Triangle", @"Blue Triangle", @"Green Triangle"];
     compareArray = [[NSMutableArray alloc] initWithCapacity:4];
@@ -110,7 +112,11 @@
                     break;
                 } else {
                     if ([object isEqual:[compareArray lastObject]]) {
-                        NSLog(@"Command Object Not Found");
+                        [compareArray removeAllObjects];
+                        [self shapeColorAllViewsWithinArray:tagArray atIndex:0];
+                        badCount++;
+                        NSLog(@"Bad Count = %i", badCount);
+                        break;
                     }
                 }
         }
@@ -125,8 +131,12 @@
 - (void) didChooseView: (ShapeView *) shapeView{    
     if ([compareArray objectAtIndex:shapeView.tag] == pickedCommand) {
         NSLog(@"Cool Beans");
+        [compareArray removeAllObjects];
+        badCount = 0;
+        [self randomCommand];
+        [self shapeColorAllViewsWithinArray:arrayOfTags atIndex:0];
     } else {
-        NSLog(@"YOU DUMB!");
+        NSLog(@"Not Cool");
     }
     
     
