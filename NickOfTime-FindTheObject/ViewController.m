@@ -17,8 +17,6 @@
     NSMutableArray *compareArray;
     
     __weak IBOutlet UILabel *commandLabel;
-    int badCount;
-    //an array to randomize the shape of the objects
 }
 
 @end
@@ -28,14 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    badCount = 0;
     arrayOfTags = @[@"0",@"1",@"2",@"3"];
     
     commandArray = @[@"Red Square", @"Blue Square", @"Green Square", @"Red Circle", @"Blue Circle", @"Green Circle", @"Red Triangle", @"Blue Triangle", @"Green Triangle"];
     unpickedCommandsArray = [[NSMutableArray alloc] initWithArray:commandArray];
     
     compareArray = [[NSMutableArray alloc] initWithCapacity:4];
-
+    
     [self randomCommand];
     [self shapeColorAllViewsWithinArray:arrayOfTags atIndex:0];
     
@@ -66,8 +63,8 @@
             }
         }
     }
-    int r = arc4random_uniform(unpickedCommandsArray.count);
-    NSLog(@"%i",r);
+    int r = arc4random() %unpickedCommandsArray.count;
+    //NSLog(@"%i",r);
     
     //Need to make a custom class with a property for color and shape
     
@@ -112,49 +109,77 @@
     }
     
     if ([tagString isEqual:[tagArray lastObject]]) {
-        //Run the fast enumeration to do the comparison between the command and randomly generated shapes
-        /*for (NSString *object in compareArray) {
-                if (object == pickedCommand) {
-                    break;
-                } else {
-                    if ([object isEqual:[compareArray lastObject]]) {
-                        [compareArray removeAllObjects];
-                        [self shapeColorAllViewsWithinArray:tagArray atIndex:0];
-                        badCount++;
-                        NSLog(@"Bad Count = %i", badCount);
-                        break;
+        
+        
+        //Put in another loop that checks what the command object is (shape, color) and assign it to one of the compareArray objects
+        //random compareArray.count to and change the image - replace object at index
+        
+        int t = arc4random()%4;
+        //NSLog(@"%i", t);
+        
+        for (ShapeView *subview in self.view.subviews) {
+            if (![subview isKindOfClass:[UILabel class]]) {
+                if (subview.tag == t) {
+                    if ([pickedCommand isEqual:@"Blue Square"]){
+                        UIImage *blueSquare = [UIImage imageNamed: @"blue_square.png"];
+                        [subview setImage:blueSquare];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Blue Square"];
+                    } else if ([pickedCommand isEqual:@"Blue Circle"]){
+                        UIImage *blueCircle = [UIImage imageNamed: @"blue_circle.png"];
+                        [subview setImage:blueCircle];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Blue Circle"];
+                    } else if ([pickedCommand isEqual:@"Blue Triangle"]){
+                        UIImage *blueTriangle = [UIImage imageNamed: @"blue_triangle.png"];
+                        [subview setImage:blueTriangle];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Blue Triangle"];
+                    } else if ([pickedCommand isEqual:@"Green Square"]){
+                        UIImage *greenSquare = [UIImage imageNamed: @"green_square.png"];
+                        [subview setImage:greenSquare];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Green Square"];
+                    } else if ([pickedCommand isEqual:@"Green Circle"]){
+                        UIImage *greenCircle = [UIImage imageNamed: @"green_circle.png"];
+                        [subview setImage:greenCircle];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Green Circle"];
+                    } else if ([pickedCommand isEqual:@"Green Triangle"]){
+                        UIImage *greenTriangle = [UIImage imageNamed: @"green_triangle.png"];
+                        [subview setImage:greenTriangle];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Green Triangle"];
+                    } else if ([pickedCommand isEqual:@"Red Square"]){
+                        UIImage *redSquare = [UIImage imageNamed: @"pink_square.png"];
+                        [subview setImage:redSquare];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Red Square"];
+                    } else if ([pickedCommand isEqual:@"Red Circle"]){
+                        UIImage *redCircle = [UIImage imageNamed: @"pink_circle.png"];
+                        [subview setImage:redCircle];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Red Circle"];
+                    } else if ([pickedCommand isEqual:@"Red Triangle"]){
+                        UIImage *redTriangle = [UIImage imageNamed: @"pink_triangle.png"];
+                        [subview setImage:redTriangle];
+                        [compareArray replaceObjectAtIndex:t withObject:@"Red Triangle"];
                     }
                 }
-        }*/
+            }
+        }
+        
         return;
     } else {
         [self shapeColorAllViewsWithinArray:tagArray atIndex:tagIndex+1];
     }
+    unpickedCommandsArray = [commandArray mutableCopy];
     
 }
 
-- (void) didChooseView: (ShapeView *) shapeView{    
+- (void) didChooseView: (ShapeView *) shapeView{
     if ([compareArray objectAtIndex:shapeView.tag] == pickedCommand) {
-        NSLog(@"Cool Beans");
+        //NSLog(@"Cool Beans");
         [compareArray removeAllObjects];
-        badCount = 0;
         [self randomCommand];
         [self shapeColorAllViewsWithinArray:arrayOfTags atIndex:0];
     } else {
-        NSLog(@"Not Cool");
+        NSLog(@"you lose");
     }
     
-    
-    //If shapeView == the command stuff then it is a match and they win, else nothing
-    //objectAtIndex: shapeView.tag
-    
 }
-
-/*-(void) didChooseView(ShapeView *)shapeView{
- for (UIImageView *subview in self.view.subviews){
- 
- }
- }*/
 
 - (void)didReceiveMemoryWarning
 {
