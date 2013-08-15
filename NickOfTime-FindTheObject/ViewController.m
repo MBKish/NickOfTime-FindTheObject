@@ -13,7 +13,9 @@
     NSString *pickedCommand;
     NSArray *arrayOfTags;
     NSArray *commandArray;
+    NSMutableArray *unpickedCommandsArray;
     NSMutableArray *compareArray;
+    
     __weak IBOutlet UILabel *commandLabel;
     int badCount;
     //an array to randomize the shape of the objects
@@ -28,7 +30,10 @@
     [super viewDidLoad];
     badCount = 0;
     arrayOfTags = @[@"0",@"1",@"2",@"3"];
+    
     commandArray = @[@"Red Square", @"Blue Square", @"Green Square", @"Red Circle", @"Blue Circle", @"Green Circle", @"Red Triangle", @"Blue Triangle", @"Green Triangle"];
+    unpickedCommandsArray = [[NSMutableArray alloc] initWithArray:commandArray];
+    
     compareArray = [[NSMutableArray alloc] initWithCapacity:4];
 
     [self randomCommand];
@@ -41,6 +46,7 @@
     
     commandLabel.text = [NSString stringWithFormat:@"Tap the %@",[commandArray objectAtIndex:command]];
     pickedCommand = [commandArray objectAtIndex:command];
+    [unpickedCommandsArray removeObjectAtIndex:command];
 }
 
 
@@ -60,46 +66,46 @@
             }
         }
     }
-    
-    int r = arc4random_uniform(9);
+    int r = arc4random_uniform(unpickedCommandsArray.count);
+    NSLog(@"%i",r);
     
     //Need to make a custom class with a property for color and shape
     
     //We only want one of the asked shape!
     
-    if (r == 0) {
+    if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Blue Square"]) {
         UIImage *blueSquare = [UIImage imageNamed: @"blue_square.png"];
         [selectedView setImage:blueSquare];
         [compareArray addObject:@"Blue Square"];
-    } else if (r == 1) {
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Blue Circle"]) {
         UIImage *blueCircle = [UIImage imageNamed: @"blue_circle.png"];
         [selectedView setImage:blueCircle];
         [compareArray addObject:@"Blue Circle"];
-    } else if (r == 2){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Blue Triangle"]) {
         UIImage *blueTriangle = [UIImage imageNamed: @"blue_triangle.png"];
         [selectedView setImage:blueTriangle];
         [compareArray addObject:@"Blue Triangle"];
-    } else if (r == 3){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Green Square"]) {
         UIImage *greenSquare = [UIImage imageNamed: @"green_square.png"];
         [selectedView setImage:greenSquare];
         [compareArray addObject:@"Green Square"];
-    } else if (r == 4){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Green Circle"]) {
         UIImage *greenCircle = [UIImage imageNamed: @"green_circle.png"];
         [selectedView setImage:greenCircle];
         [compareArray addObject:@"Green Circle"];
-    } else if (r == 5){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Green Triangle"]) {
         UIImage *greenTriangle = [UIImage imageNamed: @"green_triangle.png"];
         [selectedView setImage:greenTriangle];
         [compareArray addObject:@"Green Triangle"];
-    } else if (r == 6){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Red Square"]) {
         UIImage *redSquare = [UIImage imageNamed: @"pink_square.png"];
         [selectedView setImage:redSquare];
         [compareArray addObject:@"Red Square"];
-    } else if (r == 7){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Red Circle"]) {
         UIImage *redCircle = [UIImage imageNamed: @"pink_circle.png"];
         [selectedView setImage:redCircle];
         [compareArray addObject:@"Red Circle"];
-    } else if (r == 8){
+    } else if ([[unpickedCommandsArray objectAtIndex:r] isEqual: @"Red Triangle"]) {
         UIImage *redTriangle = [UIImage imageNamed: @"pink_triangle.png"];
         [selectedView setImage:redTriangle];
         [compareArray addObject:@"Red Triangle"];
@@ -107,7 +113,7 @@
     
     if ([tagString isEqual:[tagArray lastObject]]) {
         //Run the fast enumeration to do the comparison between the command and randomly generated shapes
-        for (NSString *object in compareArray) {
+        /*for (NSString *object in compareArray) {
                 if (object == pickedCommand) {
                     break;
                 } else {
@@ -119,10 +125,9 @@
                         break;
                     }
                 }
-        }
+        }*/
         return;
-    }
-    else {
+    } else {
         [self shapeColorAllViewsWithinArray:tagArray atIndex:tagIndex+1];
     }
     
